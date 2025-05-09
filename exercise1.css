@@ -1,32 +1,33 @@
 /* General Styles */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+    width: 100%;
     background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Container */
+/* Container for everything */
 .container {
+    padding: 20px;
     width: 90%;
     max-width: 1200px;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Header */
 .header {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap; /* Allows the header to wrap on smaller screens */
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .header img {
@@ -37,11 +38,10 @@ body {
 
 /* Navigation */
 nav {
+    margin-bottom: 20px;
     background-color: #f8f9fa;
     padding: 15px;
     border-radius: 8px;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 nav ul {
@@ -51,8 +51,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 nav ul li a {
@@ -66,7 +65,7 @@ nav ul li a:hover {
     color: #0056b3;
 }
 
-/* About Section */
+/* Article */
 article {
     background-color: #ffffff;
     padding: 20px;
@@ -84,6 +83,7 @@ article {
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    position: relative;
 }
 
 .slide {
@@ -143,6 +143,7 @@ footer {
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
+        text-align: center;
     }
 
     .header img {
@@ -150,8 +151,12 @@ footer {
     }
 
     nav ul li {
-        display: block;
-        margin: 5px 0;
+        display: inline;
+        margin-right: 15px;
+    }
+
+    nav ul li:last-child {
+        margin-right: 0;
     }
 
     nav ul li a {
